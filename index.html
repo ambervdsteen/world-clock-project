@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>world clock project - Amber</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,8 +22,8 @@
     <option value="">Medellín</option>
     <option value="">Amsterdam</option>
   </select>
-
-    <div class="city"> 
+<div id="cities">
+    <div class="city" id="ldn"> 
         <div>
             <h3>London </h3>
         <div class="date"> 6th of May 2024</div>
@@ -29,14 +31,14 @@
     <div class="time"> 05.03 <small>PM</small> </div>
         </div>
 
-        <div class="city"> 
-            <div>
-                <h3>Jakarta </h3>
-            <div class="date"> 6th of May 2024</div>
-            </div>
+    <div class="city" id="jkr"> 
+        <div>
+            <h3>Jakarta </h3>
+        <div class="date"> 6th of May 2024</div>
+        </div>
         <div class="time"> 05.03 <small>PM</small> </div>
-            </div>
-
+        </div>
+</div>
     </div>
     <footer>
         this project was coded by <strong>Amber van der Steen</strong> and is open sourced on <a href="https://github.com/ambervdsteen/world-clock-project" target="_blank"> Github </a>
