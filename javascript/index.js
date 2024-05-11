@@ -18,6 +18,7 @@ jakartaTimeElement.innerHTML=jakartaTime.format("h:mm:ss [<small>]A[</small]");
 
 function updateCity (event){
     let timeZoneCity=event.target.value;
+    if (timeZoneCity === "current-location") {timeZoneCity=moment.tz.guess();}
     let cityName=timeZoneCity.replace("_", " ").split("/")[1];
     let cityTime=moment().tz(timeZoneCity);
     let citiesElement=document.querySelector("#cities");
@@ -27,7 +28,7 @@ function updateCity (event){
         <h3>${cityName} </h3>
         <div class="date"> ${cityTime.format("Do [of] MMMM YYYY")}</div>
         </div>
-        <div class="time"> ${cityTime.format("h:mm")} <small>${cityTime.format("A")}</small> </div>
+        <div class="time"> ${cityTime.format("hh:mm")} <small>${cityTime.format("A")}</small> </div>
     </div>
     `
 }
