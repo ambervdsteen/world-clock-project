@@ -30,8 +30,10 @@ function updateCity (event){
         </div>
         <div class="time"> ${cityTime.format("hh:mm:ss")} <small>${cityTime.format("A")}</small> </div>
     </div>
+    <a href="/"> back to homepage </a>
     `
 }
+
 
 updateTime();
 setInterval(updateTime, 1000);
